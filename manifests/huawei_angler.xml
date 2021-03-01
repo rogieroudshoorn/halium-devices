@@ -1,8 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-    <project path="device/huawei/angler" name="android_device_huawei_angler" remote="los" />
-
-    <project path="kernel/huawei/angler" name="win8linux/android_kernel_huawei_angler" remote="hal" />
 
     <project path="vendor/huawei" name="proprietary_vendor_huawei" remote="them" />
+
+    <remote name="Flohack74" fetch="https://github.com/Flohack74/" revision="halium-7.1" />
+    <project path="device/huawei/angler" name="android_device_huawei_angler" remote="Flohack74" />
+    <project path="kernel/huawei/angler" name="android_kernel_huawei_angler" remote="Flohack74" />
+
+    <remote name="beidl" fetch="git://github.com/fredldotme" />
+    <project path="external/gpg" name="android_external_gpg" revision="halium-7.1" remote="beidl" />
+    <remove-project path="external/toybox" name="android_external_toybox" />
+    <project path="external/toybox" name="android_external_toybox" revision="halium-7.1" remote="beidl" />
+
+    <remote name="ubp" fetch="https://github.com/ubports/" revision="halium-7.1" />
+    <remove-project path="bootable/recovery" name="android_bootable_recovery" />
+    <project path="bootable/recovery" name="android_bootable_recovery" remote="ubp" />
+
+    <remove-project path="system/core" name="Halium/android_system_core" />
+    <project path="system/core" name="Halium/android_system_core" groups="pdk" remote="hal" revision="halium-7.1-adbroot" />
+
+
 </manifest>

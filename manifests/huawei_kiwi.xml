@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+    <remote name="wegank" fetch="https://github.com/wegank" revision="cm-14.1" />
+    <project path="device/huawei/kiwi" name="android_device_huawei_kiwi" remote="wegank" revision="cm-14.1" />
+    <project path="kernel/huawei/kiwi" name="android_kernel_huawei_kiwi" remote="wegank" revision="cm-14.1" />
+    <project path="vendor/huawei" name="proprietary_vendor_huawei" remote="them" revision="cm-14.1" />
+</manifest>
